@@ -66,18 +66,18 @@ public class Drivetrain {
             rightLead.config_kP(0, 0.021277);
         }
         else{
-            maxVelocity = 15000;
-            leftLead.config_kF(0, 0.028998);
-            leftLead.config_kP(0, 0.021277);
-            rightLead.config_kF(0, 0.028998);
-            rightLead.config_kP(0, 0.021277);
+            maxVelocity = 6681;
+            leftLead.config_kF(0,0.13884);
+            leftLead.config_kP(0, 0.153099);
+            rightLead.config_kF(0, 0.13884);
+            rightLead.config_kP(0, 0.153099);
         }
 
         y = setDeadband(y);
         x = setDeadband(x);
 
-        leftLead.set(ControlMode.Velocity, (y*maxVelocity)+(x*maxVelocity/2));
-        rightLead.set(ControlMode.Velocity, (y*maxVelocity)+(x*-maxVelocity/2));
+        leftLead.set(ControlMode.Velocity, (y*maxVelocity)+(x*-maxVelocity/3));
+        rightLead.set(ControlMode.Velocity, (y*maxVelocity)+(x*maxVelocity/3));
     }
 
     public double setDeadband(double num){
