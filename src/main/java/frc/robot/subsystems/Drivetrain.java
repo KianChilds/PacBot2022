@@ -1,7 +1,5 @@
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.InvertType;
-import com.ctre.phoenix.motorcontrol.RemoteFeedbackDevice;
 import com.ctre.phoenix.motorcontrol.TalonSRXControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
@@ -38,7 +36,7 @@ public class Drivetrain extends SubsystemBase {
     }
 
     public void demand(double rSpeed, double lSpeed){
-        r1Srx.set(TalonSRXControlMode.Velocity, 8000*rSpeed);
-        l1Srx.set(TalonSRXControlMode.Velocity, 8000*lSpeed);
+        r1Srx.set(TalonSRXControlMode.Velocity, 32000*rSpeed);
+        l1Srx.set(TalonSRXControlMode.Velocity, 32000*lSpeed);
     }
 }
